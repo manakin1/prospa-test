@@ -1,0 +1,40 @@
+<div class="c-calculator">
+  <p>How much money do you need?</p>
+  <input type="text" ng-model="loanAmount" id="loanSlider" slider options="sliderOptions" />
+
+  <div class="c-slider__steps">
+    <div ng-repeat="step in sliderSteps">${{ step | number }}</div>
+  </div>
+
+  <div class="c-calculator__value">
+    <input type="text" ng-model="loanAmountFormatted" class="c-calculator__value__input"
+           ng-change="inputChangeHandler()" />
+    <span class="c-calculator__value__currency">$</span>
+  </div>
+
+  <number-picker-component num-min="3" num-total="10" number-selected="loanDuration"></number-picker-component>
+
+  <div class="c-calculator__results">
+    <div ng-show="!errorMessage">
+      <p class="c-calculator__summary">
+        ${{ loanAmountFormatted }} over {{ loanDuration }} months will approximately equate to:
+      </p>
+
+      <p class="c-calculator__payment-amount"><span>{{ numRepayments }}</span> daily repayments</p>
+      <p class="c-calculator__payment-amount"><span>${{ dailyPayment }}</span> per day</p>
+    </div>
+
+    <div class="c-calculator__error" ng-show="errorMessage">
+      <p>{{ errorMessage }}</p>
+    </div>
+
+    <p class="c-calculator__disclaimer">
+      When we calculate your exact rate, we take into account a number of factors including our assessment on the strength of your business. This calculation is an estimate only. Conditions apply to all loan options and to full or partial repayments. Fees and charges also apply and are subject to change. Applications are subject to approval and full terms and conditions will be in the loan offer.
+    </p>
+    <p class="c-calculator__disclaimer">
+      <a href="#">Connect your bank statement</a> for a more accurate result.
+    </p>
+  </div>
+
+  <application-form-component></application-form-component>
+</div>

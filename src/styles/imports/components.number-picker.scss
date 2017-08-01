@@ -1,0 +1,73 @@
+// Styles
+
+.c-number-picker {
+  margin-top: pxToRem(30);
+}
+
+.c-number-picker__list {
+  @extend %list-reset;
+  @extend %default-flex-container;
+
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  margin: pxToRem(10) 0;
+}
+
+.c-number-picker__item {
+  background-color: $white;
+  border: pxToRem(1) solid $geyser;
+  cursor: hand;
+  cursor: pointer;
+  -webkit-flex: 1;
+  flex: 1;
+  padding: pxToRem(15) pxToRem(12);
+  text-align: center;
+  -webkit-transition: background-color $default-transition;
+  transition: background-color $default-transition;
+  width: auto;
+
+  &.is-active {
+    background-color: $primary-color;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+
+  &:not(:last-child) {
+    border-right: none;
+  }
+
+  &:first-child {
+    @extend %default-border-radius;
+
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  &:last-child {
+    @extend %default-border-radius;
+
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+  }
+
+  &:hover {
+    background-color: $geyser;
+  }
+
+  @media #{$mq-small} {
+    padding: pxToRem(12) pxToRem(9);
+  }
+}
+
+.c-number-picker__number {
+  @extend %link-reset;
+
+  color: $shuttleGrey;
+  opacity: .75;
+
+  .is-active & {
+    color: $white;
+  }
+}

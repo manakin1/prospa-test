@@ -1,0 +1,29 @@
+// Variables
+
+$default-button-padding: pxToRem(4) pxToRem(55);
+$large-button-padding: pxToRem(6) pxToRem(80);
+
+// Styles
+
+.c-btn {
+  @include font-size(14px);
+
+  background-color: $primary-color;
+  -webkit-border-radius: pxToRem(24);
+  border-radius: pxToRem(24);
+  color: $white;
+  display: block;
+  padding: $default-button-padding;
+  text-transform: uppercase;
+  -webkit-transition: background-color $default-transition;
+  transition: background-color $default-transition;
+  width: auto;
+
+  &--large {
+    padding: $large-button-padding;
+  }
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}

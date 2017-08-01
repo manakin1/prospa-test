@@ -1,0 +1,28 @@
+// Variables
+
+$heading-size-1:        38px !default;
+$heading-size-2:        32px !default;
+$heading-size-3:        26px !default;
+$heading-size-4:        22px !default;
+$heading-size-5:        16px !default;
+$heading-size-6:        16px !default;
+
+
+// Styles
+
+h1 { @include font-size($heading-size-1); }
+h2 { @include font-size($heading-size-2); }
+h3 { @include font-size($heading-size-3); }
+h4 { @include font-size($heading-size-4); }
+h5 { @include font-size($heading-size-5); }
+h6 { @include font-size($heading-size-6); }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $heading-color;
+  font-weight: $font-semibold;
+}

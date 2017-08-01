@@ -1,0 +1,10 @@
+// Styles
+
+.c-application-form {
+  @include clearfix;
+
+  input[type="submit"] {
+    float: right;
+    margin: pxToRem(20) 0 pxToRem(10) 0;
+  }
+}

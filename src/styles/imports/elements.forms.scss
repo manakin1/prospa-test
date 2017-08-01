@@ -1,0 +1,35 @@
+// Styles
+
+input {
+  @extend %default-border-radius;
+  @include font-size(16px);
+
+  border: pxToRem(1) solid $geyser;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  display: block;
+  height: $input-height;
+  margin-bottom: pxToRem(25);
+  padding: 0 pxToRem(10);
+  position: relative;
+  width: 100%;
+
+  &.ng-touched.ng-invalid {
+    border-color: $error-color;
+  }
+}
+
+input[type="submit"] {
+  &:disabled {
+    background-color: $towerGrey;
+  }
+}
+
+label {
+  display: block;
+  margin-bottom: pxToRem(5);
+}
+
+.e-form__error {
+  color: $error-color;
+}

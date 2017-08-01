@@ -1,0 +1,65 @@
+// Styles
+
+.jslider {
+  margin: pxToRem(10) 0 pxToRem(25) 0;
+}
+
+.jslider-bg {
+  @extend %default-border-radius;
+
+  background-color: $towerGrey;
+  height: pxToRem(10);
+  overflow: hidden;
+}
+
+.jslider div.jslider-bg i,
+.jslider div.jslider-bg i.default {
+  background: transparent;
+  height: pxToRem(10);
+}
+
+.jslider div.jslider-bg i.before,
+.jslider div.jslider-bg i.after {
+  background-color: $primary-color;
+}
+
+.jslider div.jslider-pointer,
+.jslider.sliderCSS div.jslider-pointer {
+  background-color: $white;
+  background-image: none;
+  border: pxToRem(1) solid $shuttleGrey;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  height: pxToRem(30);
+  margin-left: pxToRem(-15);
+  top: pxToRem(-9);
+  //transition: left $fast-transition;
+  width: pxToRem(30);
+  z-index: 99;
+
+  &::after {
+    @include font-size(18px);
+
+    color: $primary-color;
+    content: '$';
+    display: block;
+    font-width: $font-bold;
+    height: 100%;
+    line-height: pxToRem(30);
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.jslider div.jslider-value,
+.jslider div.jslider-label {
+  display: none;
+}
+
+.c-slider__steps {
+  @extend %default-flex-container;
+
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  margin-bottom: pxToRem(20);
+}

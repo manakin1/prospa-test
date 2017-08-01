@@ -1,0 +1,27 @@
+// Styles
+
+@if (variable-exists(heading-size-1)) {
+  .u-h1 { @include font-size($heading-size-1, auto, important); }
+  .u-h2 { @include font-size($heading-size-2, auto, important); }
+  .u-h3 { @include font-size($heading-size-3, auto, important); }
+  .u-h4 { @include font-size($heading-size-4, auto, important); }
+  .u-h5 { @include font-size($heading-size-5, auto, important); }
+  .u-h6 { @include font-size($heading-size-6, auto, important); }
+
+} @else {
+  @warn "You need to include `_elements.headings.scss`.";
+}
+
+.u-text\+\+ { font-size: larger  !important; }
+.u-text--   { font-size: smaller !important; }
+
+.u-text-right   { text-align:    right !important; }
+.u-text-left    { text-align: left     !important; }
+.u-text-center  { text-align:  center  !important; }
+.u-text-justify { text-align: justify  !important; }
+
+.u-text-truncate { @include truncate(100%, important); }
+
+body {
+  color: $base-font-color;
+}

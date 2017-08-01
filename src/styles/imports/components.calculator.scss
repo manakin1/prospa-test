@@ -1,0 +1,76 @@
+// Styles
+
+.c-calculator {
+  @include font-size(13px);
+
+  background-color: $porcelain;
+  margin-top: pxToRem(30);
+  max-width: 100%;
+  padding: pxToRem(22) pxToRem(18);
+  width: pxToRem(470);
+}
+
+.c-calculator__value { 
+  position: relative;
+}
+
+.c-calculator__value__input {
+  padding-left: pxToRem(50);
+}
+
+.c-calculator__value__currency {
+  @include font-size(20px);
+
+  color: $base-font-color;
+  display: block;
+  left: pxToRem(20);
+  line-height: $input-height;
+  position: absolute;
+  top: 0;
+}
+
+.c-calculator__results {
+  @extend %default-border-radius;
+
+  background-color: $white;
+  border: pxToRem(1) solid $geyser;
+  -webkit-border-radius: pxToRem(8);
+  border-radius: pxToRem(8);
+  margin: pxToRem(35) 0;
+  padding: $default-container-padding;
+  text-align: center;
+}
+
+.c-calculator__disclaimer {
+  @include font-size(11px);
+
+  line-height: 1.75;
+  margin: pxToRem(5) 0;
+
+  a {
+    color: $black;
+  }
+}
+
+.c-calculator__error {
+  color: $error-color;
+  margin: pxToRem(10) 0;
+}
+
+.c-calculator__payment-amount {
+  @include font-size(14px);
+
+  float: left;
+  font-weight: $font-semibold;
+  padding: pxToRem(20) 0;
+  width: 50%;
+
+  span {
+    @include font-size(18px);
+
+    display: block;
+    padding-bottom: pxToRem(5);
+    width: 100%;
+  }
+}
+

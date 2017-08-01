@@ -1,0 +1,42 @@
+// Placeholders
+
+%default-flex-container {
+  -webkit-align-content: stretch;
+  align-content: stretch;
+  -webkit-align-items: stretch;
+  align-items: stretch;
+  display: flex;
+  -ms-flex-align: stretch;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-line-pack: stretch;
+  -ms-flex-pack: start;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+%default-flex-item {
+  -webkit-align-self: auto;
+  align-self: auto;
+  -ms-flex: 0 1 auto;
+  -webkit-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -ms-flex-item-align: auto;
+  -ms-flex-order: 0;
+  -webkit-order: 0;
+  order: 0;
+}
+
+
+// Styles
+
+.o-container {
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0 $default-container-padding;
+  width: $max-container-width;
+}

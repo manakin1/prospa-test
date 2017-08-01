@@ -1,0 +1,18 @@
+<form class="c-application-form" name="form">
+  <p>
+    <label for="name">Full name</label>
+    <input type="text" name="name" ng-model="applicantDetails.name" placeholder="Full name" required/>
+  </p>
+  <p>
+    <label for="email">Email</label>
+    <input type="email" name="email" ng-model="applicantDetails.email" placeholder="Email" required />
+  </p>
+  <p>
+    <input type="submit" class="c-btn" name="submit" value="Submit" ng-click="submitHandler($event)"
+           ng-disabled="!form.$valid" />
+  </p>
+
+  <p class="e-form__error" ng-if="!form.$valid && form.$dirty">
+      There are errors in your form
+  </p>
+</form>

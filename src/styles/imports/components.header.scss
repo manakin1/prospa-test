@@ -1,0 +1,45 @@
+// Variables
+
+$header-height: pxToRem(70);
+
+
+// Styles
+
+.c-header {
+  background-color: $shuttleGrey;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.62));
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.14);
+  height: $header-height;
+}
+
+.c-header__logo {
+  background-image: url('assets/prospa-white.png');
+  background-image: url('assets/prospa-white.svg');
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: block;
+  float: left;
+  height: $header-height;
+  margin-top: pxToRem(1);
+  max-width: 30%;
+  width: pxToRem(110);
+}
+
+.c-header__title {
+  @include font-size(16px);
+
+  color: $white;
+  float: left;
+  font-family: $font-arial;
+  font-weight: $font-light;
+  line-height: $header-height;
+  margin: 0 0 0 pxToRem(40);
+  text-transform: uppercase;
+
+  @media #{$mq-small} {
+    @include font-size(14px);
+
+    line-height: $header-height;
+  }
+}

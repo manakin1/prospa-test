@@ -1,0 +1,6 @@
+// Functions
+
+// Convert a pixel value to REM units
+@function pxToRem($pixel) {
+  @return $pixel/16 + rem;
+}

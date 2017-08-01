@@ -1,0 +1,12 @@
+<div class="c-number-picker">
+  <p>How long do you want the loan for (in months)?</p>
+
+  <ul class="c-number-picker__list">
+    <li class="c-number-picker__item" 
+        ng-class="{'is-active': $index + $ctrl.numMin === $ctrl.numberSelected}"
+        ng-repeat="i in getNumber($ctrl.numTotal) track by $index" 
+        ng-click="selectNumber($event, ($index + $ctrl.numMin))">
+      <a href="#" class="c-number-picker__number" role="button">{{ $index + $ctrl.numMin }}</a>
+    </li>
+  </ul>
+</div>
