@@ -8,7 +8,7 @@ Install Node modules:
 npm install
 ```
 
-Run a local web server to view the design templates:
+Run a local web server:
 
 ```bash
 gulp serve
